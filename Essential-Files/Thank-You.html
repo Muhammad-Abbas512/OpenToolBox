@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - OpenToolBox | Message Received</title>
+    <meta name="description" content="Thank you for contacting OpenToolBox. Your message has been received and we'll get back to you shortly.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="./public/images/image-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Navigation Styles */
+        .top-nav {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo h1 span {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #667eea;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .nav-menu ul li a i {
+            color: #667eea;
+        }
+
+        .nav-menu ul li a:hover,
+        .nav-menu ul li a.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .nav-menu ul li a:hover i,
+        .nav-menu ul li a.active i {
+            color: white;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            border-radius: 30px;
+            padding: 0.3rem;
+        }
+
+        .search-box {
+            border: none;
+            background: transparent;
+            padding: 0.5rem 1rem;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .search-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Thank You Page Main Content */
+        .thank-you-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .thank-you-card {
+            background: white;
+            border-radius: 30px;
+            padding: 4rem 3rem;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            animation: slideUp 0.6s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+            }
+        }
+
+        .success-icon i {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .thank-you-card h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .thank-you-card .subtitle {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .thank-you-card .message-details {
+            background: #f8f9ff;
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .message-details p {
+            margin-bottom: 0.8rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .message-details p i {
+            color: #667eea;
+            width: 25px;
+        }
+
+        .response-time {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 1px dashed #667eea;
+        }
+
+        .response-time h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .response-time h3 i {
+            color: #667eea;
+        }
+
+        .response-time p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .action-btn.secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: white;
+            padding: 4rem 2rem 1rem;
+            margin-top: auto;
+            box-shadow: 0 -5px 30px rgba(0,0,0,0.05);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .footer-section h3 i {
+            color: #667eea;
+            margin-right: 0.5rem;
+        }
+
+        .footer-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid #f0f0f0;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            border-color: #667eea;
+        }
+
+        .newsletter-form button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #f0f0f0;
+            color: #666;
+        }
+
+        .footer-bottom i {
+            color: #ff4757;
+            margin: 0 0.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                transition: left 0.3s ease;
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-menu ul li a {
+                padding: 1rem;
+                justify-content: center;
+            }
+
+            .nav-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .thank-you-card h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation (Same as About page) -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-tools"></i> OpenTool<span>box</span></h1>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li id="pdfDropdown">
+                        <a href="pdftools.html"><i class="fas fa-file-pdf"></i> PDF Tools</a>
+                    </li>
+                    <li class="dropdown" id="seoDropdown">
+                        <a href="seotools.html"><i class="fas fa-search"></i> SEO Tools</a>
+                    </li>
+                    <li><a href="about.html"><i class="fa-solid fa-address-card"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" class="search-box" placeholder="Search tools...">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Main Content -->
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h1>Thank You!</h1>
+            <p class="subtitle">Your message has been sent successfully</p>
+            
+           
+            <div class="response-time">
+                <h3><i class="fas fa-clock"></i> What's Next?</h3>
+                <p>Our team will review your message and get back to you within <strong>24-48 hours</strong>. We appreciate your patience and will respond as soon as possible.</p>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="../index.html" class="action-btn primary">
+                    <i class="fas fa-tools"></i> Explore Tools
+                </a>
+                <a href="about.html" class="action-btn secondary">
+                    <i class="fas fa-address-card"></i> Learn About Us
+                </a>
+            </div>
+            
+            <p style="margin-top: 2rem; color: #999; font-size: 0.9rem;">
+                <i class="fas fa-envelope-open"></i> 
+                A confirmation copy has been sent to your email address
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer (Same as About page) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-tools"></i> OpenToolBox</h3>
+                <p>Your all-in-one solution for online tools. Free, fast, and secure utilities for PDF, images, SEO,
+                    and more.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/OpenToolBox" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="pdftools.html">PDF Tools</a></li>
+                    <li><a href="imagetools.html">Image Tools</a></li>
+                    <li><a href="seotools.html">SEO Tools</a></li>
+                    <li><a href="videotools.html">Video Tools</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="Disclaimer.html">Disclaimer</a></li>
+                    <li><a href="gdpr-compliance.html">GDPR Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates on new tools and features.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OpenToolBox. All rights reserved. | Designed with <i class="fas fa-heart"
+                    style="color: #ff4757;"></i> for the digital community</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-toggle') && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Dropdown functionality for mobile
+        function setupDropdowns() {
+            const pdfDropdown = document.getElementById('pdfDropdown');
+            const seoDropdown = document.getElementById('seoDropdown');
+            
+            [pdfDropdown, seoDropdown].forEach(dropdown => {
+                if (dropdown) {
+                    const toggle = dropdown.querySelector('a');
+                    toggle.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 992) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            dropdown.classList.toggle('active');
+                            
+                            [pdfDropdown, seoDropdown].forEach(other => {
+                                if (other !== dropdown) {
+                                    other.classList.remove('active');
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown') && window.innerWidth <= 992) {
+                    const dropdowns = document.querySelectorAll('.dropdown');
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        }
+
+        // Newsletter form submission
+        function setupNewsletterForm() {
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const emailInput = newsletterForm.querySelector('input[type="email"]');
+                    if (emailInput.value) {
+                        alert('Thank you for subscribing to our newsletter!');
+                        emailInput.value = '';
+                    }
+                });
+            }
+        }
+
+        // Display submitted form data (if coming from contact form)
+        function displaySubmittedData() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Get form data from localStorage or sessionStorage (set by contact form)
+            const contactData = sessionStorage.getItem('contactFormData');
+            
+            if (contactData) {
+                try {
+                    const data = JSON.parse(contactData);
+                    
+                    // Display name
+                    if (data.firstName || data.lastName) {
+                        const fullName = `${data.firstName || ''} ${data.lastName || ''}`.trim();
+                        document.getElementById('displayName').textContent = fullName;
+                    }
+                    
+                    // Display email
+                    if (data.email) {
+                        document.getElementById('displayEmail').textContent = data.email;
+                    }
+                    
+                    // Display subject
+                    if (data.subject) {
+                        const subjectMap = {
+                            'support': 'Technical Support',
+                            'feedback': 'Feedback & Suggestions',
+                            'business': 'Business Inquiries',
+                            'partnership': 'Partnership Opportunities',
+                            'press': 'Press & Media',
+                            'other': 'Other'
+                        };
+                        document.getElementById('displaySubject').textContent = subjectMap[data.subject] || data.subject;
+                    }
+                    
+                    // Clear session storage after displaying
+                    // sessionStorage.removeItem('contactFormData');
+                } catch (e) {
+                    console.error('Error parsing contact data:', e);
+                }
+            }
+            
+            // If URL has parameters, use those instead
+            if (urlParams.has('name')) {
+                document.getElementById('displayName').textContent = urlParams.get('name');
+            }
+            if (urlParams.has('email')) {
+                document.getElementById('displayEmail').textContent = urlParams.get('email');
+            }
+            
+            // Set current time
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: true 
+            });
+            const dateString = now.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+            });
+            document.getElementById('displayTime').textContent = `${dateString} at ${timeString}`;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            setupDropdowns();
+            setupNewsletterForm();
+            displaySubmittedData();
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 992) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    const dropdowns = document.querySelectorAll('.dropdown');
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
