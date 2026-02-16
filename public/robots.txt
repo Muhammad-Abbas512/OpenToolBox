@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Sitemap Location
 Sitemap: https://opentoolboxes.netlify.app/sitemap.xml
+
+# Block system folders
+Disallow: /public/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /Essential-Files/
