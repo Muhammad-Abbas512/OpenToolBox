@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toolifi.vercel.app/sitemap.xml
+Sitemap: https://opentoolboxes.netlify.app/sitemap.xml

@@ -1,49 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <url>
-    <loc>https://toolifi.vercel.app/</loc>
-    <priority>1.00</priority>
-  </url>
 
-  <url>
-    <loc>https://toolifi.vercel.app/index.html</loc>
-    <priority>0.90</priority>
-  </url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/pdftools</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/seotools</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/about</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/contact</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/imagetools</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/videotools</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/privacy-policy</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/terms-of-service</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/cookie-policy</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/disclaimer</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://opentoolboxes.netlify.app/essential-files/gdpr-compliance</loc>
+  <lastmod>2026-02-16T05:54:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://toolifi.vercel.app/about.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://toolifi.vercel.app/contact.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://toolifi.vercel.app/privacy-policy.html</loc>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://toolifi.vercel.app/terms-of-service.html</loc>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://toolifi.vercel.app/cookie-policy.html</loc>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://toolifi.vercel.app/Disclaimer.html</loc>
-    <priority>0.60</priority>
-  </url>
-
-  <url>
-    <loc>https://toolifi.vercel.app/gdpr-compliance.html</loc>
-    <priority>0.60</priority>
-  </url>
 
 </urlset>
