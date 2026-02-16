@@ -530,6 +530,9 @@
                     } else if (tool.title === 'PDF Compressor') {
                         window.location.href = 'pdfcompresor.html';
                     }
+                    else if(tool.title === 'Background Remover') {
+                        window.location.href = 'Tools/Image Tools/Background Remover/Bg-remover.html';
+                        }
                     else if (tool.title === 'SEO Analyzer') {
                         window.location.href = 'seoanalyzer.html';
                     } else if (tool.title === 'PDF to Word') {
@@ -636,16 +639,20 @@
                     const toggle = dropdown.querySelector('a');
                     toggle.addEventListener('click', (e) => {
                         if (window.innerWidth <= 992) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            dropdown.classList.toggle('active');
+                            // Only prevent default if there's actually a dropdown submenu
+                            const submenu = dropdown.querySelector('.dropdown-menu');
+                            if (submenu) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                dropdown.classList.toggle('active');
 
-                            // Close other dropdowns
-                            [pdfDropdown, seoDropdown].forEach(other => {
-                                if (other !== dropdown) {
-                                    other.classList.remove('active');
-                                }
-                            });
+                                // Close other dropdowns
+                                [pdfDropdown, seoDropdown].forEach(other => {
+                                    if (other !== dropdown) {
+                                        other.classList.remove('active');
+                                    }
+                                });
+                            }
                         }
                     });
                 }
@@ -655,7 +662,10 @@
             document.addEventListener('click', (e) => {
                 if (!e.target.closest('.dropdown') && window.innerWidth <= 992) {
                     [pdfDropdown, seoDropdown].forEach(dropdown => {
-                        dropdown.classList.remove('active');
+                        const submenu = dropdown.querySelector('.dropdown-menu');
+                        if (submenu) {
+                            dropdown.classList.remove('active');
+                        }
                     });
                 }
             });
